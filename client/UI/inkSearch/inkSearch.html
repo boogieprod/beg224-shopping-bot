@@ -1,0 +1,34 @@
+<template name="inkSearch">
+	<h1>{{_ 'ink-search-title'}}</h1>
+
+	<div class="ui two column doubling stackable grid container">
+		<div class="column">
+			<h3>{{_ 'printer-search'}}</h3>
+			<div class="ui search" id="print-search">
+				<div class="ui large icon input">
+					<input class="prompt" placeholder="{{searchplaceholder}}" type="text">
+					<i class="search icon" id="printer-search"></i>
+				</div>
+				<div class="results"></div>
+			</div>
+		</div>
+		<div class="column">
+			{{> printerSearchResults}}
+		</div>
+	</div>
+	<div class="ui two column doubling stackable grid container">
+
+	</div>
+</template>
+
+<template name="printerSearchResults">
+	<div>
+		{{#each selected_printer_features}}
+			<div><b>{{description}}</b></div>
+			<div>{{_ 'comp_cart_black'}}: <b>{{compatible_blk_ink}}</b></div>
+			<div>{{_ 'comp_cart_clr'}}: <b>{{compatible_clr_ink}}</b></div>
+			<div>{{_ 'ink_type'}}: {{ink_type}}</div>
+			<img class="ui small image" id="printer-img" src="/images/printers/{{img}}"/>
+		{{/each}}
+	</div>
+</template>

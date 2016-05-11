@@ -1,0 +1,18 @@
+// Mixin for ratio dimensions    
+.viewportRatio(@x, @y) {
+  width: 100vw;
+  height: 100vh;
+  max-width: @x / @y * 100vh;
+  max-height: 100vh;
+}
+
+div#master-layout {
+
+  // Force a ratio of 5:1 for all <div>
+  .viewportRatio(5, 1);
+
+  background-color: #E5e5e5;
+  margin: 0;
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+}

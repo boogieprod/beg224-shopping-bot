@@ -1,0 +1,1 @@
+@PrinterSelection = new Meteor.Collection(null)

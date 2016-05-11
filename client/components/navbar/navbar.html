@@ -1,0 +1,32 @@
+<template name="navbar">
+	<div class="ui attached stackable menu">
+  		<div class="ui container">
+    		<a class="item" href="{{pathFor 'homeUI'}}">
+      			<img class="ui tiny image" src="/images/logo/{{logo}}"/><hr> {{_ 'home-link'}}
+    		</a>
+    		<a class="item" href="{{pathFor 'inkSearch'}}">
+      			<img class="ui tiny image" src="/images/ink-cmyk/ink_cmyk.jpg"/><hr> {{_ 'ink-search-link'}}
+    		</a>
+    		<a class="item" href="{{pathFor 'interactiveStore'}}">
+      			<img class="ui tiny image" src="/images/store/beg.jpg"/><hr> {{_ 'int-store-link'}}
+    		</a>
+    		<div class="ui simple dropdown item">
+      			More
+      			<i class="dropdown icon"></i>
+      			<div class="menu">
+        			<a class="item"><i class="edit icon"></i> Edit Profile</a>
+        			<a class="item"><i class="globe icon"></i> Choose Language</a>
+        			<a class="item"><i class="settings icon"></i> Account Settings</a>
+      			</div>
+    		</div>
+    		<div class="right item">
+      			<div class="ui input">
+      				<input placeholder="Search..." type="text">
+      			</div>
+    		</div>
+    		<div class="right item">
+    			{{> i18n_dropdown}}
+    		</div>
+  		</div>
+	</div>
+</template>

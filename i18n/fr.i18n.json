@@ -1,0 +1,17 @@
+{
+	/* Navbar */
+
+	"home-link": "Retour au menu principal",
+	"ink-search-link": "Chercheur d'encre",
+	"int-store-link": "Magasin interactif",
+
+	/* Ink-Search */
+
+	"search-placeholder": "Veuillez entrer la marque, le mod\u00E8le et/ou le num\u00E9ro",
+	"ink-search-title": "Choisissez parmis les 3 choix de recherche suivants:",
+	"printer-search": "Recherche selon le nom de l'imprimante, la marque, le mod\u00E8le",
+	"comp_cart_black": "Num\u00E9ro des cartouches noires compatibles",
+	"comp_cart_clr": "Num\u00E9ro des cartouches de couleur compatibles",
+	"ink_type": "Type d'encre",
+	"no-result-print-search": "Aucun r\u00E9sultat, essayez de raffiner votre recherche"
+}
