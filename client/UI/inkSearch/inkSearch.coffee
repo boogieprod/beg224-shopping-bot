@@ -89,3 +89,5 @@ Template.printerSearchResults.events
 	"click .input": (e, t) ->
 		tag = TAPi18n.__ 'cent_per_page_query'
 		$("button#temp_dom").replaceWith("<button class='ui green button' id='get-cost'>" + tag + "</button>")
+
+	
