@@ -1,0 +1,1 @@
+@InkCostHelper = new Meteor.Collection(null)

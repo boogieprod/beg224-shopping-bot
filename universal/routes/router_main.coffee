@@ -4,6 +4,7 @@ Router.map ->
 		path: "/"
 		waitOn: ->
 			TAPi18n.subscribe 'home_carousel'
+			TAPi18n.subscribe 'manufacturers'
 
 	@route "inkSearch",
 		path: "/ink-search"

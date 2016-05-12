@@ -25,9 +25,20 @@
 	<div>
 		{{#each selected_printer_features}}
 			<div><b>{{description}}</b></div>
-			<div>{{_ 'comp_cart_black'}}: <b>{{compatible_blk_ink}}</b></div>
-			<div>{{_ 'comp_cart_clr'}}: <b>{{compatible_clr_ink}}</b></div>
+			<hr>
+			<div id="black-ink-num">{{_ 'comp_cart_black'}}: {{compatible_blk_ink}}</div>
+			<div id="black-ink-yield">{{_ 'black_yield'}}: {{black_yield}}</div>
+			<div class="ui small icon input">
+				<input placeholder="{{input_amount_placeholder}}" type="text" id="entered-amount">
+				<i class="dollar icon"></i>
+			</div>
+			<button class="ui green button" id="get-cost">{{_ 'cent_per_page_query'}}</button>
+			<hr>
+			<div>{{_ 'comp_cart_clr'}}: {{compatible_clr_ink}}</div>
+			<div>{{_ 'color_yield'}}: {{color_yield}}</div>
+			<hr>
 			<div>{{_ 'ink_type'}}: {{ink_type}}</div>
+			<hr>
 			<img class="ui small image" id="printer-img" src="/images/printers/{{img}}"/>
 		{{/each}}
 	</div>

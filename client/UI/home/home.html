@@ -1,8 +1,10 @@
 <template name="homeUI">
-		{{#each home_carousel_items}}
-			<div>
-				{{name}}
-				<img class="ui small image" src="/images/homeCarousel/{{img_name}}"/>
+	<h3>{{_ 'featured_manufacturers'}}</h3>
+	<div class="ui horizontal list">
+		{{#each manufacturers}}
+			<div class="item">
+				<img class="ui tiny image" src="/images/manufacturers/{{logo}}"/>
 			</div>
 		{{/each}}
+	</div>
 </template>

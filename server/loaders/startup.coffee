@@ -13,17 +13,17 @@ Meteor.startup ->
 			]
 
 	Manuf = [
-				{name: "Brother", logo: "a", systemId: "BR"},
-				{name: "Canon", logo: "a", systemId: "CA"},
-				{name: "Dell", logo: "a", systemId: "DE"},
-				{name: "Epson", logo: "a", systemId: "EP"},
-				{name: "HP", logo: "a", systemId: "HP"},
-				{name: "Lexmark", logo: "a", systemId: "LE"},
-				{name: "Panasonic", logo: "a", systemId: "PA"},
-				{name: "Samsung", logo: "a", systemId: "SA"},
-				{name: "Staples", logo: "a", systemId: "OB"},
-				{name: "Sharp", logo: "a", systemId: "SH"},
-				{name: "Xerox", logo: "a", systemId: "XE"}
+				{name: "Brother", logo: "brother.png", systemId: "BR"},
+				{name: "Canon", logo: "canon.png", systemId: "CA"},
+				{name: "Dell", logo: "dell.png", systemId: "DE"},
+				{name: "Epson", logo: "epson.png", systemId: "EP"},
+				{name: "HP", logo: "hp.png", systemId: "HP"},
+				{name: "Lexmark", logo: "lexmark.png", systemId: "LE"},
+				{name: "Panasonic", logo: "panasonic.png", systemId: "PA"},
+				{name: "Samsung", logo: "samsung.png", systemId: "SA"},
+				{name: "Staples", logo: "staples.png", systemId: "OB"},
+				{name: "Sharp", logo: "sharp.png", systemId: "SH"},
+				{name: "Xerox", logo: "xerox.png", systemId: "XE"}
 			]
 	Model = [
 				{name: "Artisan", manufacturer: "EP", systemId: "ART"},

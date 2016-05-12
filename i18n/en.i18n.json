@@ -5,13 +5,21 @@
 	"ink-search-link": "Ink & Toner finder",
 	"int-store-link": "Interactive store look-up",
 
+	/* Home */
+
+	"featured_manufacturers": "Featured Manufacturers",
+
 	/* Ink-Search */
 
 	"ink-search-title": "Choose between the following 3 search options:",
 	"search-placeholder": "Please enter brand, model and/or number...",
 	"printer-search": "Search using printer's name, brand, model",
-	"comp_cart_blk": "Compatible black cartridge number",
+	"comp_cart_black": "Compatible black cartridge number",
+	"black_yield": "Pages yield (black)",
 	"comp_cart_clr": "Compatible color cartridge number",
+	"color_yield": "Pages yield (each color)",
 	"ink_type": "Ink type",
-	"no-result-print-search": "No results, try to refine your search"
+	"no-result-print-search": "No results, try to refine your search",
+	"cent_per_page_query": "Cost per page?",
+	"input_amount_placeholder": "Enter cartridge cost here..."
 }
