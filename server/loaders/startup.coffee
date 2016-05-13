@@ -29,7 +29,14 @@ Meteor.startup ->
 				{name: "Artisan", manufacturer: "EP", systemId: "ART"},
 				{name: "Expression", manufacturer: "EP", systemId: "EXP"},
 				{name: "Stylus", manufacturer: "EP", systemId: "STY"},
-				{name: "WorkForce", manufacturer: "EP", systemId: "WKF"}
+				{name: "WorkForce", manufacturer: "EP", systemId: "WKF"},
+				{name: "Deskjet", manufacturer: "HP", systemId: "DSK"},
+				{name: "ENVY", manufacturer: "HP", systemId: "ENV"},
+				{name: "OfficeJet", manufacturer: "HP", systemId: "OFJ"},
+				{name: "PageWide", manufacturer: "HP", systemId: "PAW"},
+				{name: "PhotoSmart", manufacturer: "HP", systemId: "PHS"},
+				{name: "Laser Jet", manufacturer: "HP", systemId: "LAJ"},
+				{name: "Color Laser Jet", manufacturer: "HP", systemId: "CLJ"}
 			]
 
 	Printer = [
@@ -141,8 +148,34 @@ Meteor.startup ->
 				{manufacturer: "EP", model: "WKF", number: "Pro WF-8590", comp_blk_ink: ["748", "748XL", "748XXL"], comp_clr_ink: ["748", "748XL", "748XXL"], description: "Epson WorkForce Pro WF-8590", systemId: "EPWKF8590", ink: "Ink jet", fr_ink: "Jet d'encre"},
 				{manufacturer: "EP", model: "WKF", number: "WF-2630", comp_blk_ink: ["220", "220XL"], comp_clr_ink: ["220", "220XL"], description: "Epson WorkForce WF-2630", systemId: "EPWKF2630", ink: "Ink jet", fr_ink: "Jet d'encre"},
 				{manufacturer: "EP", model: "WKF", number: "WF-2650", comp_blk_ink: ["220", "220XL"], comp_clr_ink: ["220", "220XL"], description: "Epson WorkForce WF-2650", systemId: "EPWKF2650", ink: "Ink jet", fr_ink: "Jet d'encre"},
-				{manufacturer: "EP", model: "WKF", number: "WF-2660", comp_blk_ink: ["220", "220XL"], comp_clr_ink: ["220", "220XL"], description: "Epson WorkForce WF-2660", systemId: "EPWKF2660", ink: "Ink jet", fr_ink: "Jet d'encre"}
+				{manufacturer: "EP", model: "WKF", number: "WF-2660", comp_blk_ink: ["220", "220XL"], comp_clr_ink: ["220", "220XL"], description: "Epson WorkForce WF-2660", systemId: "EPWKF2660", ink: "Ink jet", fr_ink: "Jet d'encre"},
+
+				{manufacturer: "HP", model: "DSK", number: "1000-1056", comp_blk_ink: ["61", "61XL"], comp_clr_ink: ["61", "61XL"], description: "HP Deskjet 1000-1056", systemId: "HPDSK10XX", ink: "Ink jet", fr_ink: "Jet d'encre"},
+				{manufacturer: "HP", model: "DSK", number: "1110-1112", comp_blk_ink: ["63", "63XL"], comp_clr_ink: ["63", "63XL"], description: "HP Deskjet 1110-1112", systemId: "HPDSK111X", ink: "Ink jet", fr_ink: "Jet d'encre"},
+				{manufacturer: "HP", model: "DSK", number: "1510-1517", comp_blk_ink: ["61", "61XL"], comp_clr_ink: ["61", "61XL"], description: "HP Deskjet 1510-1517", systemId: "HPDSK151X", ink: "Ink jet", fr_ink: "Jet d'encre"},
+				{manufacturer: "HP", model: "DSK", number: "2050-2054", comp_blk_ink: ["61", "61XL"], comp_clr_ink: ["61", "61XL"], description: "HP Deskjet 2050-2054", systemId: "HPDSK205X", ink: "Ink jet", fr_ink: "Jet d'encre"},
+				{manufacturer: "HP", model: "DSK", number: "2130-2134", comp_blk_ink: ["63", "63XL"], comp_clr_ink: ["63", "63XL"], description: "HP Deskjet 2130-2134", systemId: "HPDSK213X", ink: "Ink jet", fr_ink: "Jet d'encre"},
+				{manufacturer: "HP", model: "DSK", number: "2510-2514", comp_blk_ink: ["61", "61XL"], comp_clr_ink: ["61", "61XL"], description: "HP Deskjet 2510-2514", systemId: "HPDSK251X", ink: "Ink jet", fr_ink: "Jet d'encre"},
+				{manufacturer: "HP", model: "DSK", number: "2540-2549", comp_blk_ink: ["61", "61XL"], comp_clr_ink: ["61", "61XL"], description: "HP Deskjet 2540-2549", systemId: "HPDSK254X", ink: "Ink jet", fr_ink: "Jet d'encre"},
+				{manufacturer: "HP", model: "DSK", number: "3000", comp_blk_ink: ["61", "61XL"], comp_clr_ink: ["61", "61XL"], description: "HP Deskjet 3000", systemId: "HPDSK3000", ink: "Ink jet", fr_ink: "Jet d'encre"},
+				{manufacturer: "HP", model: "DSK", number: "3050-3054", comp_blk_ink: ["61", "61XL"], comp_clr_ink: ["61", "61XL"], description: "HP Deskjet 3050-3054", systemId: "HPDSK305X", ink: "Ink jet", fr_ink: "Jet d'encre"},
+				{manufacturer: "HP", model: "DSK", number: "3055", comp_blk_ink: ["61", "61XL"], comp_clr_ink: ["61", "61XL"], description: "HP Deskjet 3055", systemId: "HPDSK3055", ink: "Ink jet", fr_ink: "Jet d'encre"},
+				{manufacturer: "HP", model: "DSK", number: "3056", comp_blk_ink: ["61", "61XL"], comp_clr_ink: ["61", "61XL"], description: "HP Deskjet 3056", systemId: "HPDSK3056", ink: "Ink jet", fr_ink: "Jet d'encre"},
+				{manufacturer: "HP", model: "DSK", number: "3059", comp_blk_ink: ["61", "61XL"], comp_clr_ink: ["61", "61XL"], description: "HP Deskjet 3059", systemId: "HPDSK3059", ink: "Ink jet", fr_ink: "Jet d'encre"},
+				{manufacturer: "HP", model: "DSK", number: "3070", comp_blk_ink: ["564", "564XL"], comp_clr_ink: ["564", "564XL"], description: "HP Deskjet 3070", systemId: "HPDSK3070", ink: "Ink jet", fr_ink: "Jet d'encre"},
+				{manufacturer: "HP", model: "DSK", number: "3510-3512", comp_blk_ink: ["61", "61XL"], comp_clr_ink: ["61", "61XL"], description: "HP Deskjet 3510-3512", systemId: "HPDSK351X", ink: "Ink jet", fr_ink: "Jet d'encre"},
+				{manufacturer: "HP", model: "DSK", number: "3522", comp_blk_ink: ["564", "564XL"], comp_clr_ink: ["564", "564XL"], description: "HP Deskjet 3522", systemId: "HPDSK3522", ink: "Ink jet", fr_ink: "Jet d'encre"},
+				{manufacturer: "HP", model: "DSK", number: "3526", comp_blk_ink: ["564", "564XL"], comp_clr_ink: ["564", "564XL"], description: "HP Deskjet 3526", systemId: "HPDSK3526", ink: "Ink jet", fr_ink: "Jet d'encre"},
+				{manufacturer: "HP", model: "DSK", number: "3630-3634", comp_blk_ink: ["61", "61XL"], comp_clr_ink: ["61", "61XL"], description: "HP Deskjet 3630-3634", systemId: "HPDSK363X", ink: "Ink jet", fr_ink: "Jet d'encre"},
+				{manufacturer: "HP", model: "DSK", number: "6943", comp_blk_ink: ["96"], comp_clr_ink: ["97", "99", "100"], description: "HP Deskjet 6943", systemId: "HPDSK6943", ink: "Ink jet", fr_ink: "Jet d'encre"},
+				{manufacturer: "HP", model: "DSK", number: "6980-6988", comp_blk_ink: ["96"], comp_clr_ink: ["97", "99", "100"], description: "HP Deskjet 6980-6988", systemId: "HPDSK698X", ink: "Ink jet", fr_ink: "Jet d'encre"},
+				{manufacturer: "HP", model: "DSK", number: "D1520-1568", comp_blk_ink: ["21"], comp_clr_ink: ["22"], description: "HP Deskjet D1520-1568", systemId: "HPDSK15XX", ink: "Ink jet", fr_ink: "Jet d'encre"},
+				{manufacturer: "HP", model: "DSK", number: "D2320-2368", comp_blk_ink: ["21"], comp_clr_ink: ["22", "58"], description: "HP Deskjet D2320-2368", systemId: "HPDSK23XX", ink: "Ink jet", fr_ink: "Jet d'encre"},
+				{manufacturer: "HP", model: "DSK", number: "D2430-2468", comp_blk_ink: ["21"], comp_clr_ink: ["22", "58"], description: "HP Deskjet D2430-2468", systemId: "HPDSK24XX", ink: "Ink jet", fr_ink: "Jet d'encre"},
+				{manufacturer: "HP", model: "DSK", number: "D2530-2568", comp_blk_ink: ["60", "60XL"], comp_clr_ink: ["60", "60XL"], description: "HP Deskjet D2530-2568", systemId: "HPDSK25XX", ink: "Ink jet", fr_ink: "Jet d'encre"},
+				{manufacturer: "HP", model: "DSK", number: "D2645-2680", comp_blk_ink: ["60", "60XL"], comp_clr_ink: ["60", "60XL"], description: "HP Deskjet D2645-2680", systemId: "HPDSK26XX", ink: "Ink jet", fr_ink: "Jet d'encre"}
 			]
+
 	Cartridge = [
 				{manuf: "EP", number: "79", type: "jet", color: "black", yield: "470", desc: "Epson black cartridge number 79", fr_desc: "Cartouche num\u00E9ro 79 noir Epson", id: "EPJETBK79"},
 				{manuf: "EP", number: "79", type: "jet", color: "light cyan", yield: "810", desc: "Epson light cyan cartridge number 79", fr_desc: "Cartouche num\u00E9ro 79 cyan p\u00E2le Epson", id: "EPJETLC79"},
@@ -306,7 +339,7 @@ Meteor.startup ->
 	if Printers.find().count() is 0
 
 		Printer.forEach (printer) ->
-			Printers.insertTranslations {manufacturer: printer.manufacturer, model: printer.model, model_number: printer.number, compatible_blk_ink: printer.comp_blk_ink, compatible_clr_ink: printer.comp_clr_ink, description: printer.description, img: printer.description + ".jpg", systemId: printer.systemId, ink_type: printer.ink}, fr: {ink_type: printer.fr_ink}
+			Printers.insertTranslations {manufacturer: printer.manufacturer, model: printer.model, model_number: printer.number, compatible_blk_ink: printer.comp_blk_ink, compatible_clr_ink: printer.comp_clr_ink, description: printer.description, img: printer.description + ".png", systemId: printer.systemId, ink_type: printer.ink}, fr: {ink_type: printer.fr_ink}
 
 	if InkCartridges.find().count() is 0
 

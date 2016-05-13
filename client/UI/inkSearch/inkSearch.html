@@ -4,13 +4,17 @@
 	<div class="ui two column doubling stackable grid container">
 		<div class="column">
 			<h3>{{_ 'printer-search'}}</h3>
-			<div class="ui search" id="print-search">
-				<div class="ui large icon input">
-					<input class="prompt" placeholder="{{searchplaceholder}}" type="text">
-					<i class="search icon" id="printer-search"></i>
+			<form class="ui form" id="printer-search-form">
+				<div class="field">
+					<div class="ui fluid search" id="print-search">
+						<div class="ui large icon input">
+							<input class="prompt" placeholder="{{searchplaceholder}}" type="text">
+							<i class="search icon" id="printer-search"></i>
+						</div>
+						<div class="results"></div>
+					</div>
 				</div>
-				<div class="results"></div>
-			</div>
+			</form>
 		</div>
 		<div class="column">
 			{{> printerSearchResults}}
@@ -28,11 +32,13 @@
 			<hr>
 			<div id="black-ink-num">{{_ 'comp_cart_black'}}: {{compatible_blk_ink}}</div>
 			<div id="black-ink-yield">{{_ 'black_yield'}}: {{black_yield}}</div>
-			<div class="ui small icon input">
-				<input placeholder="{{input_amount_placeholder}}" type="text" id="entered-amount">
-				<i class="dollar icon"></i>
+			<div id="cost-search">
+				<div class="ui small icon input">
+					<input placeholder="{{input_amount_placeholder}}" type="text" id="entered-amount">
+					<i class="dollar icon"></i>
+				</div>
+				<button class="ui green button" id="get-cost">{{_ 'cent_per_page_query'}}</button>
 			</div>
-			<button class="ui green button" id="get-cost">{{_ 'cent_per_page_query'}}</button>
 			<hr>
 			<div>{{_ 'comp_cart_clr'}}: {{compatible_clr_ink}}</div>
 			<div>{{_ 'color_yield'}}: {{color_yield}}</div>

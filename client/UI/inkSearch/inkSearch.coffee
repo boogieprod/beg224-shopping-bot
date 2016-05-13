@@ -13,6 +13,16 @@ Template.inkSearch.events
 						noResults = TAPi18n.__ 'no-result-print-search'
 						html = '<div>' + noResults + '</div>'
 						return html
+
+				onSelect: (selection, response) ->
+						printer = selection.title
+						selected_printer = Printers.findOne(description: printer).systemId
+						selection_empty = PrinterSelection.find().count() is 0
+						if selection_empty is true
+							PrinterSelection.insert(id: selected_printer)
+						else
+							PrinterSelection.remove({})
+							PrinterSelection.insert(id: selected_printer)
 						})
 
 	"click #printer-search": (evt, tmpl) ->
@@ -24,7 +34,7 @@ Template.inkSearch.events
 			PrinterSelection.insert(id: selected_printer)
 		else
 			PrinterSelection.remove({})
-			PrinterSelection.insert(id: selected_printer)
+			PrinterSelection.insert(id: selected_printer)		
 
 Template.inkSearch.helpers
 	
@@ -84,10 +94,9 @@ Template.printerSearchResults.events
 			ink_num = inkobj.cart_number
 			costperpage = (Number(entered_amount) / Number(inkobj.yield)).toFixed(2)
 			ink_cost.push " " + ink_num + ": " + costperpage + " $"
-		$("button#get-cost").replaceWith("<button class='ui green button' id='temp_dom'>" + ink_cost + "</button>")
+		$("button#get-cost").remove()
+		$("div#cost-search").append("<button class='ui green button' id='temp_dom'>" + ink_cost + "</button>")
 
 	"click .input": (e, t) ->
 		tag = TAPi18n.__ 'cent_per_page_query'
 		$("button#temp_dom").replaceWith("<button class='ui green button' id='get-cost'>" + tag + "</button>")
-
-	
