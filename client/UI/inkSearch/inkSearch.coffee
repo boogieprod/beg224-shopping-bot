@@ -56,12 +56,12 @@ Template.printerSearchResults.helpers
 		manuf = this.manufacturer
 		if InkCostHelper.find().count is 0
 			blk_ink_num.forEach (blkinkno) ->
-				yieldpercart = InkCartridges.findOne(manufacturer: manuf, cartridge_number: blkinkno, cartridge_color: "black").cartridge_yield
+				yieldpercart = InkCartridges.findOne(manufacturer: manuf, cartridge_color: "black", cartridge_number: blkinkno).cartridge_yield
 				InkCostHelper.insert {yield: yieldpercart, cart_number: blkinkno}
 		else
 			InkCostHelper.remove({})
 			blk_ink_num.forEach (blkinkno) ->
-				yieldpercart = InkCartridges.findOne(manufacturer: manuf, cartridge_number: blkinkno, cartridge_color: "black").cartridge_yield
+				yieldpercart = InkCartridges.findOne(manufacturer: manuf, cartridge_color: "black", cartridge_number: blkinkno).cartridge_yield
 				InkCostHelper.insert {yield: yieldpercart, cart_number: blkinkno}
 		InkHelper = InkCostHelper.find().fetch()
 		InkHelper.forEach (inkhelp) ->
@@ -69,14 +69,13 @@ Template.printerSearchResults.helpers
 		return yieldarray
 
 	color_yield: ->
-		yields = []
+		clr_yields = []
 		clr_ink_num = this.compatible_clr_ink
 		manuf = this.manufacturer
 		clr_ink_num.forEach (clrinkno) ->
-			yieldpercart = InkCartridges.findOne(manufacturer: manuf, cartridge_number: clrinkno,
-				cartridge_color: "cyan").cartridge_yield
-			yields.push yieldpercart
-		return yields
+			yieldpercart = InkCartridges.findOne(manufacturer: manuf, cartridge_color: "cyan", cartridge_number: clrinkno).cartridge_yield
+			clr_yields.push yieldpercart
+		return clr_yields
 
 Template.printerSearchResults.events
 
