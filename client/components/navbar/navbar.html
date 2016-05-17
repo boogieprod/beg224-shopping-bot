@@ -1,5 +1,5 @@
 <template name="navbar">
-	<div class="ui attached stackable menu">
+	<div class="ui attached stackable menu" id="navbar-menu">
   		<div class="ui container">
     		  <a class="item" href="{{pathFor 'homeUI'}}">
       			 <img class="ui centered tiny image" src="/images/logo/{{logo}}"/><hr> {{_ 'home-link'}}
@@ -10,6 +10,9 @@
     	 	 <a class="item" href="{{pathFor 'interactiveStore'}}">
       		  	<img class="ui centered tiny image" src="/images/store/beg.jpg"/><hr> {{_ 'int-store-link'}}
     		  </a>
+         <a class="item" href="{{pathFor 'serviceCheats'}}">
+              <img class="ui centered tiny image" src="/images/services/{{serv_logo}}"/><hr> {{_ 'service-cheats-link'}}
+          </a> 
     		<div class="ui simple dropdown item">
       			More
       			<i class="dropdown icon"></i>

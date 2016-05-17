@@ -16,3 +16,6 @@ Router.map ->
 
 	@route "interactiveStore",
 		path: "/interactive-store"
+
+	@route "serviceCheats",
+		path: "/featured-services"

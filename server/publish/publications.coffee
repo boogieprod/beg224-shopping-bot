@@ -1,6 +1,9 @@
 TAPi18n.publish 'logos', ->
 	Logos.i18nFind()
 
+TAPi18n.publish 'services_logo', ->
+	ServicesLogo.i18nFind()
+
 TAPi18n.publish 'home_carousel', ->
 	HomeCarousel.i18nFind()
 

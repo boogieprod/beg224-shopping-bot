@@ -4,6 +4,10 @@ Meteor.startup ->
 				{name: "Staples", img_name: "logo_en.png", fr_img_name: "logo_fr.png"}
 			]
 
+	Serv_logo = [
+				{name: "Make More Happen", img: "make_more_happen.png", fr_img: "make_more_happen_fr.png"}
+			]
+
 	Carousel = [
 				{name: "Ink-helper", img_name: "copy_print_en.jpg", id: 1, fr_name: "Chercheur d'encre", fr_img_name: "copy_print_fr.png"},
 				{name: "Virtual Store", img_name: "copy_print_en.jpg", id: 2, fr_name: "Magasin Virtuel", fr_img_name: "copy_print_fr.png"},
@@ -59,3 +63,8 @@ Meteor.startup ->
 
 		Logo.forEach (logo) ->
 			Logos.insertTranslations {name: logo.name, img_name: logo.img_name}, fr: {img_name: logo.fr_img_name}
+
+	if ServicesLogo.find().count() is 0
+
+		Serv_logo.forEach (logo) ->
+			ServicesLogo.insertTranslations {name: logo.name, img: logo.img}, fr: {img: logo.fr_img}
