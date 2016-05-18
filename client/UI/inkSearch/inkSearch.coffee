@@ -72,10 +72,16 @@ Template.printerSearchResults.helpers
 		clr_yields = []
 		clr_ink_num = this.compatible_clr_ink
 		manuf = this.manufacturer
-		clr_ink_num.forEach (clrinkno) ->
-			yieldpercart = InkCartridges.findOne(manufacturer: manuf, cartridge_color: "cyan", cartridge_number: clrinkno).cartridge_yield
-			clr_yields.push yieldpercart
-		return clr_yields
+		if InkCartridges.find(manufacturer: manuf, cartridge_color: "cyan", cartridge_number: clr_ink_num[0]).count() is 0
+			clr_ink_num.forEach (clrinkno) ->
+				yieldpercart = InkCartridges.findOne(manufacturer: manuf, cartridge_color: "tri-color", cartridge_number: clrinkno).cartridge_yield
+				clr_yields.push yieldpercart
+			return clr_yields
+		else
+			clr_ink_num.forEach (clrinkno) ->
+				yieldpercart = InkCartridges.findOne(manufacturer: manuf, cartridge_color: "cyan", cartridge_number: clrinkno).cartridge_yield
+				clr_yields.push yieldpercart
+			return clr_yields
 
 Template.printerSearchResults.events
 

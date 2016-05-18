@@ -8,6 +8,12 @@ Meteor.startup ->
 				{name: "Make More Happen", img: "make_more_happen.png", fr_img: "make_more_happen_fr.png"}
 			]
 
+	Serv_banners = [
+				{name: "Easycare service plan", img: "esp.png", desc: "Plan cost calculator and service details", fr_name: "Plan de service fiable", fr_img: "esp_fr.png", fr_desc: "Calculateur et d\u00E9tails du plan"},
+				{name: "Easytech", img: "easytech.png", desc: "Tech services made simple", fr_name: "\u00C9quipe technique fiable", fr_img: "easytech_fr.png", fr_desc: "Services techniques, la fa\u00E7on simple"},
+				{name: "Copy&Print center", img: "copycenter.png", desc: "...", fr_name: "Centre de copies et impressions", fr_img: "copycenter_fr.png", fr_desc: "..."}
+			]
+
 	Carousel = [
 				{name: "Ink-helper", img_name: "copy_print_en.jpg", id: 1, fr_name: "Chercheur d'encre", fr_img_name: "copy_print_fr.png"},
 				{name: "Virtual Store", img_name: "copy_print_en.jpg", id: 2, fr_name: "Magasin Virtuel", fr_img_name: "copy_print_fr.png"},
@@ -41,7 +47,10 @@ Meteor.startup ->
 				{name: "Photosmart", manufacturer: "HP", systemId: "PHS"},
 				{name: "LaserJet", manufacturer: "HP", systemId: "LAJ"},
 				{name: "Color LaserJet", manufacturer: "HP", systemId: "CLJ"},
-				{name: "TopShot LaserJet", manufacturer: "HP", systemId: "TOS"}
+				{name: "TopShot LaserJet", manufacturer: "HP", systemId: "TOS"},
+				{name: "DCP", manufacturer: "BR", systemId: "DCP"},
+				{name: "HL", manufacturer: "BR", systemId: "BHL"},
+				{name: "MFC", manufacturer: "BR", systemId: "MFC"}
 			]
 			
 	if Manufacturers.find().count() is 0
@@ -68,3 +77,7 @@ Meteor.startup ->
 
 		Serv_logo.forEach (logo) ->
 			ServicesLogo.insertTranslations {name: logo.name, img: logo.img}, fr: {img: logo.fr_img}
+
+	if ServicesBanner.find().count() is 0
+		Serv_banners.forEach (banner) ->
+			ServicesBanner.insertTranslations {name: banner.name, description: banner.desc, img: banner.img}, fr: {name: banner.fr_name, description: banner.fr_desc, img: banner.fr_img}

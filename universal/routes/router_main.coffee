@@ -19,3 +19,5 @@ Router.map ->
 
 	@route "serviceCheats",
 		path: "/featured-services"
+		waitOn: ->
+			TAPi18n.subscribe 'services_banner'

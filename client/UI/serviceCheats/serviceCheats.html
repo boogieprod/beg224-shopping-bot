@@ -1,13 +1,11 @@
 <template name="serviceCheats">
-	<div class="ui four column centered grid" id="services-grid">
-		<div class="column">
-			Test
+	<div class="ui centered grid" id="services-grid">
+		{{#each add_services}}
+		<div class="five wide column">
+			<h3>{{name}}</h3>
+			<img class="ui centered small image" src="/images/services/{{img}}"/>
+			<div>{{description}}</div>
 		</div>
-		<div class="column">
-			Test
-		</div>
-		<div class="column">
-			Test
-		</div>
+		{{/each}}
 	</div>
 </template>

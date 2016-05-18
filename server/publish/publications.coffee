@@ -18,3 +18,6 @@ Meteor.publish 'manufacturers', ->
 
 TAPi18n.publish 'ink_cartridges', ->
 	InkCartridges.i18nFind()
+
+TAPi18n.publish 'services_banner', ->
+	ServicesBanner.i18nFind()

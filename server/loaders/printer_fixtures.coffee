@@ -299,7 +299,27 @@ Meteor.startup ->
 				{manufacturer: "HP", model: "LAJ", number: "Pro P1102", comp_blk_ink: ["85A"], comp_clr_ink: [" "], description: "HP LaserJet Pro P1102", systemId: "HPLAJ1102", ink: "Laser", fr_ink: "Laser"},
 				{manufacturer: "HP", model: "LAJ", number: "Pro P1106", comp_blk_ink: ["85A"], comp_clr_ink: [" "], description: "HP LaserJet Pro P1106", systemId: "HPLAJ1106", ink: "Laser", fr_ink: "Laser"},
 				{manufacturer: "HP", model: "LAJ", number: "Pro P1108", comp_blk_ink: ["85A"], comp_clr_ink: [" "], description: "HP LaserJet Pro P1108", systemId: "HPLAJ1108", ink: "Laser", fr_ink: "Laser"},
-				{manufacturer: "HP", model: "LAJ", number: "Pro P1606", comp_blk_ink: ["78A"], comp_clr_ink: [" "], description: "HP LaserJet Pro P1606", systemId: "HPLAJ1606", ink: "Laser", fr_ink: "Laser"}
+				{manufacturer: "HP", model: "LAJ", number: "Pro P1606", comp_blk_ink: ["78A"], comp_clr_ink: [" "], description: "HP LaserJet Pro P1606", systemId: "HPLAJ1606", ink: "Laser", fr_ink: "Laser"},
+				{manufacturer: "BR", model: "DCP", number: "1000", comp_blk_ink: ["TN250"], comp_clr_ink: [""], description: "Brother DCP-1000", systemId: "BRDCP1000", ink: "Laser", fr_ink: "Laser"},
+				{manufacturer: "BR", model: "DCP", number: "1200", comp_blk_ink: ["TN430", "TN460"], comp_clr_ink: [""], description: "Brother DCP-1200", systemId: "BRDCP1200", ink: "Laser", fr_ink: "Laser"},
+				{manufacturer: "BR", model: "DCP", number: "1400", comp_blk_ink: ["TN430", "TN460"], comp_clr_ink: [""], description: "Brother DCP-1400", systemId: "BRDCP1400", ink: "Laser", fr_ink: "Laser"},
+				{manufacturer: "BR", model: "DCP", number: "7020", comp_blk_ink: ["TN350"], comp_clr_ink: [""], description: "Brother DCP-7020", systemId: "BRDCP7020", ink: "Laser", fr_ink: "Laser"},
+				{manufacturer: "BR", model: "DCP", number: "7030", comp_blk_ink: ["TN330", "TN360"], comp_clr_ink: [""], description: "Brother DCP-7030", systemId: "BRDCP7030", ink: "Laser", fr_ink: "Laser"},
+				{manufacturer: "BR", model: "DCP", number: "7040", comp_blk_ink: ["TN330", "TN360"], comp_clr_ink: [""], description: "Brother DCP-7040", systemId: "BRDCP7040", ink: "Laser", fr_ink: "Laser"},
+				{manufacturer: "BR", model: "DCP", number: "7055", comp_blk_ink: ["TN410"], comp_clr_ink: [""], description: "Brother DCP-7055", systemId: "BRDCP7055", ink: "Laser", fr_ink: "Laser"},
+				{manufacturer: "BR", model: "DCP", number: "7060D", comp_blk_ink: ["TN420", "TN450"], comp_clr_ink: [""], description: "Brother DCP-7060D", systemId: "BRDCP7060", ink: "Laser", fr_ink: "Laser"},
+				{manufacturer: "BR", model: "DCP", number: "7065DN", comp_blk_ink: ["TN420", "TN450"], comp_clr_ink: [""], description: "Brother DCP-7065DN", systemId: "BRDCP7065", ink: "Laser", fr_ink: "Laser"},
+				{manufacturer: "BR", model: "DCP", number: "110C", comp_blk_ink: ["LC41"], comp_clr_ink: ["LC41"], description: "Brother DCP-110C", systemId: "BRDCP110C", ink: "Ink jet", fr_ink: "Jet d'encre"},
+				{manufacturer: "BR", model: "DCP", number: "120C", comp_blk_ink: ["LC41"], comp_clr_ink: ["LC41"], description: "Brother DCP-120C", systemId: "BRDCP120C", ink: "Ink jet", fr_ink: "Jet d'encre"},
+				{manufacturer: "BR", model: "DCP", number: "130C", comp_blk_ink: ["LC51"], comp_clr_ink: ["LC51"], description: "Brother DCP-130C", systemId: "BRDCP130C", ink: "Ink jet", fr_ink: "Jet d'encre"},
+				{manufacturer: "BR", model: "DCP", number: "165C", comp_blk_ink: ["LC61"], comp_clr_ink: ["LC61"], description: "Brother DCP-165C", systemId: "BRDCP165C", ink: "Ink jet", fr_ink: "Jet d'encre"},
+				{manufacturer: "BR", model: "DCP", number: "330C", comp_blk_ink: ["LC51"], comp_clr_ink: ["LC51"], description: "Brother DCP-330C", systemId: "BRDCP330C", ink: "Ink jet", fr_ink: "Jet d'encre"},
+				{manufacturer: "BR", model: "DCP", number: "350C", comp_blk_ink: ["LC51"], comp_clr_ink: ["LC51"], description: "Brother DCP-350C", systemId: "BRDCP350C", ink: "Ink jet", fr_ink: "Jet d'encre"},
+				{manufacturer: "BR", model: "DCP", number: "385C", comp_blk_ink: ["LC61"], comp_clr_ink: ["LC61"], description: "Brother DCP-385C", systemId: "BRDCP385C", ink: "Ink jet", fr_ink: "Jet d'encre"},
+				{manufacturer: "BR", model: "DCP", number: "395CN", comp_blk_ink: ["LC61"], comp_clr_ink: ["LC61"], description: "Brother DCP-395CN", systemId: "BRDCP395C", ink: "Ink jet", fr_ink: "Jet d'encre"},
+				{manufacturer: "BR", model: "DCP", number: "585CW", comp_blk_ink: ["LC61"], comp_clr_ink: ["LC61"], description: "Brother DCP-585CW", systemId: "BRDCP585C", ink: "Ink jet", fr_ink: "Jet d'encre"},
+				{manufacturer: "BR", model: "MFC", number: "J285DW", comp_blk_ink: ["LC101", "LC103"], comp_clr_ink: ["LC101", "LC103"], description: "Brother MFC-J285DW", systemId: "BRMFCJ285", ink: "Ink jet", fr_ink: "Jet d'encre"},
+
 			]
 
 	if Printers.find().count() is 0
