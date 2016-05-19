@@ -52,7 +52,20 @@ Meteor.startup ->
 				{name: "HL", manufacturer: "BR", systemId: "BHL"},
 				{name: "MFC", manufacturer: "BR", systemId: "MFC"}
 			]
-			
+
+	products_cat = [
+				{name: "Laptops", systemId: "LAP", fr_name: "Ordinateurs portatifs"},
+				{name: "Desktops", systemId: "DSK", fr_name: "Ordinateurs de bureau"},
+				{name: "Tablets", systemId: "TAB", fr_name: "Tablettes \u00E9lectroniques"},
+				{name: "Printers", systemId: "PRI", fr_name: "Imprimantes"},
+				{name: "Cell phones", systemId: "CEL", fr_name: "T\u00E9l\u00E9phones cellulaires"},
+				{name: "Chairs", systemId: "CHA", fr_name: "Chaises"},
+				{name: "Furnitures", systemId: "FUR", fr_name: "Meubles"},
+				{name: "eReaders", systemId: "REA", fr_name: "Lecteurs \u00E9lectroniques"},
+				{name: "Shredders", systemId: "SHR", fr_name: "D\u00E9chiqueteurs"},
+				{name: "Cameras", systemId: "CAM", fr_name: "Appareils photo"}
+			]
+
 	if Manufacturers.find().count() is 0
 
 		Manuf.forEach (manuf) ->
@@ -81,3 +94,7 @@ Meteor.startup ->
 	if ServicesBanner.find().count() is 0
 		Serv_banners.forEach (banner) ->
 			ServicesBanner.insertTranslations {name: banner.name, description: banner.desc, img: banner.img}, fr: {name: banner.fr_name, description: banner.fr_desc, img: banner.fr_img}
+
+	if ProductCategories.find().count() is 0
+		products_cat.forEach (cat) ->
+			ProductCategories.insertTranslations {name: cat.name, systemId: cat.systemId}, fr: {name: cat.fr_name}
